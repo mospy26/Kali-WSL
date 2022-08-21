@@ -160,6 +160,12 @@ fi
 
 # all aliases
 alias sudo="sudo -E"
+alias code="code.exe"
+
+# variables
+D_PROJECTS="/mnt/d/Projects"
+C_REPOS="/mnt/c/repos"
+alias cdec="cd $D_PROJECTS/e4.6"
 
 function isWinDir {
     case $PWD/ in
@@ -168,3 +174,15 @@ function isWinDir {
     esac
 }
 
+# Git is incredibly slow in WSL. So instead, use the Windows git.exe in
+# WSL if it's installed and we're in a Windows directory
+function g {
+  if isWinDir
+  then
+     git.exe "$@"
+  else
+     /usr/bin/git "$@"
+  fi
+}
+
+export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Microsoft\ VS\ Code

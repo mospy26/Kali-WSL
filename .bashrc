@@ -184,6 +184,7 @@ alias sudo="sudo -E"
 alias code="code.exe"
 alias cdec="cd $D_PROJECTS/e4.6"
 alias cdhatch3="cd $C_REPOS/Hatch3"
+alias cdbernina="cd $C_REPOS/Bernina9"
 alias cdc="cd /mnt/c"
 alias cdd="cd /mnt/d"
 

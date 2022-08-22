@@ -130,9 +130,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-export http_proxy=http://wcmproxy.pgo.local:80/
-export https_proxy=http://wcmproxy.pgo.local:80/
-
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
@@ -158,14 +155,27 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# all aliases
-alias sudo="sudo -E"
-alias code="code.exe"
+
+##############################################################################
+########################ALL CUSTOM CHANGES BEGIN HERE#########################
+##############################################################################
+
+export http_proxy=http://wcmproxy.pgo.local:80/
+export https_proxy=http://wcmproxy.pgo.local:80/
+
 
 # variables
 D_PROJECTS="/mnt/d/Projects"
 C_REPOS="/mnt/c/repos"
+
+# all aliases
+alias sudo="sudo -E"
+alias code="code.exe"
 alias cdec="cd $D_PROJECTS/e4.6"
+alias cdhatch3="cd $C_REPOS/Hatch3"
+alias cdc="cd /mnt/c"
+alias cdd="cd /mnt/d"
+
 
 function isWinDir {
     case $PWD/ in
@@ -176,7 +186,7 @@ function isWinDir {
 
 # Git is incredibly slow in WSL. So instead, use the Windows git.exe in
 # WSL if it's installed and we're in a Windows directory
-function g {
+function git {
   if isWinDir
   then
      git.exe "$@"
@@ -185,4 +195,5 @@ function g {
   fi
 }
 
+# export path
 export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Microsoft\ VS\ Code

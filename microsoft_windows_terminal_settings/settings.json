@@ -50,7 +50,7 @@
                 "name": "Command Prompt"
             },
             {
-                "bellStyle": "audible",
+                "bellStyle": "none",
                 "colorScheme": "One Half Dark",
                 "cursorShape": "filledBox",
                 "experimental.retroTerminalEffect": false,

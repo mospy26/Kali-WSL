@@ -178,6 +178,7 @@ export https_proxy=http://wcmproxy.pgo.local:80/
 # variables
 D_PROJECTS="/mnt/d/Projects"
 C_REPOS="/mnt/c/repos"
+C_HOME="/mnt/c/Users/mmustafa"
 
 # all aliases
 alias sudo="sudo -E"
@@ -208,5 +209,4 @@ function git {
 }
 
 # export path
-export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Microsoft\ VS\ Code
-
+export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Microsoft\ VS\ Code:/mnt/d/Projects/

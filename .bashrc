@@ -188,7 +188,7 @@ alias cdhatch3="cd $C_REPOS/Hatch3"
 alias cdbernina="cd $C_REPOS/Bernina9"
 alias cdc="cd /mnt/c"
 alias cdd="cd /mnt/d"
-
+alias cdscripts="cd $C_HOME/My\ Documents/Scripts"
 
 function isWinDir {
     case $PWD/ in

@@ -167,28 +167,42 @@ if ! shopt -oq posix; then
 fi
 
 
-##############################################################################
-########################ALL CUSTOM CHANGES BEGIN HERE#########################
-##############################################################################
+####################################################################################
+######################## ALL CUSTOM CHANGES BEGIN HERE #############################
+####################################################################################
 
 export http_proxy=http://wcmproxy.pgo.local:80/
 export https_proxy=http://wcmproxy.pgo.local:80/
 
 
-# variables
+################################# variables ########################################
+ 
 D_PROJECTS="/mnt/d/Projects"
 C_REPOS="/mnt/c/repos"
 C_HOME="/mnt/c/Users/mmustafa"
 
-# all aliases
+################################# all aliases #######################################
+
+# This is for WSL and when there is a proxy
 alias sudo="sudo -E"
+
+# alias code to open code.exe
 alias code="code.exe"
+
+# Project local directories
 alias cdec="cd $D_PROJECTS/e4.6"
 alias cdhatch3="cd $C_REPOS/Hatch3"
 alias cdbernina="cd $C_REPOS/Bernina9"
+
+# Shortcuts to windows C and D drive from linux
 alias cdc="cd /mnt/c"
 alias cdd="cd /mnt/d"
+
+# Shortcut to scripts directory in local PC
 alias cdscripts="cd $C_HOME/My\ Documents/Scripts"
+alias rm="rm -v"
+
+################################# any useful methods #######################################
 
 function isWinDir {
     case $PWD/ in
@@ -207,6 +221,8 @@ function git {
      /usr/bin/git "$@"
   fi
 }
+
+################################# export paths  #######################################
 
 # export path
 export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Microsoft\ VS\ Code:/mnt/d/Projects/

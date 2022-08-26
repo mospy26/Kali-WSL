@@ -183,9 +183,6 @@ C_HOME="/mnt/c/Users/mmustafa"
 
 ################################# all aliases #######################################
 
-# This is for WSL and when there is a proxy
-alias sudo="sudo -E"
-
 # alias code to open code.exe
 alias code="code.exe"
 
@@ -200,7 +197,9 @@ alias cdd="cd /mnt/d"
 
 # Shortcut to scripts directory in local PC
 alias cdscripts="cd $C_HOME/My\ Documents/Scripts"
-alias rm="rm -v"
+
+# grep files from list of tracked files on git
+alias gitgrep="git ls-files | grep $@"
 
 ################################# any useful methods #######################################
 

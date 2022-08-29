@@ -2,9 +2,6 @@
 
 ################################# all aliases #######################################
 
-# alias code to open code.exe
-alias code="code.exe"
-
 # Shortcuts to windows C and D drive from linux
 alias cdc="cd /mnt/c"
 alias cdd="cd /mnt/d"

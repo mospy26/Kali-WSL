@@ -23,3 +23,6 @@ alias cdscripts="cd $C_HOME/My\ Documents/Scripts"
 
 # Alias sudo to sudo -E for proxy since env variables need to be preserved (which have the http/s proxy settings)
 alias sudo="sudo -E"
+
+# export PATH for code.exe
+export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Micsoroft\ VS\ Code/bin

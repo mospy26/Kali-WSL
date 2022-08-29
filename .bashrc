@@ -68,8 +68,8 @@ function parse_git_branch {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-if [ -f ~/.git-prompt.sh ]; then
-    source ~/.git-prompt.sh
+if [ -f ~/assets/git-prompt.sh ]; then
+    source ~/assets/git-prompt.sh
 else
     echo "git-prompt.sh not found!"
 fi

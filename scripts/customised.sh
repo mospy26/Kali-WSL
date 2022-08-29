@@ -1,4 +1,3 @@
-
 # Customised bash code to be sourced in any .bashrc file
 
 ################################# all aliases #######################################
@@ -32,4 +31,3 @@ function git {
      /usr/bin/git "$@"
   fi
 }
-

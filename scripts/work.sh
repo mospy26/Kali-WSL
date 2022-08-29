@@ -20,3 +20,6 @@ alias cdbernina="cd $C_REPOS/Bernina9"
 
 # Shortcut to scripts directory in local PC
 alias cdscripts="cd $C_HOME/My\ Documents/Scripts"
+
+# Alias sudo to sudo -E for proxy since env variables need to be preserved (which have the http/s proxy settings)
+alias sudo="sudo -E"

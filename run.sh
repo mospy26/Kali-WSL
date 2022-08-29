@@ -57,7 +57,4 @@ copyScripts() {
 decorate copyScripts
 copyScripts "Copying necesary scripts and modifying bashrc..."
 
-# Source bashrc file
-. ~/.bashrc
-
 echo "Setup complete. Enjoy!"

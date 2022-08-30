@@ -53,7 +53,18 @@ copyScripts() {
 		mkdir -p ~/scripts && cp ./scripts/work.sh ~/scripts
 		echo "source ~/scripts/work.sh" >> ~/.bashrc
 	fi
+
+	copyGit() {
+		if [ ! -f /usr/bin/realgit ]; then
+			sudo mv /usr/bin/git /usr/bin/realgit
+		fi
+		sudo cp ./scripts/git /usr/bin/git
+		sudo chmod +x /usr/bin/git
+	}
+	decorate copyGit
+	copyGit "Moving git to realgit... This will require sudo access"
 }
+
 decorate copyScripts
 copyScripts "Copying necesary scripts and modifying bashrc..."
 

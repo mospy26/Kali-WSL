@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Author: Craig F
+# Wrapper script around git
+# Used for WSL. Will decide whether to run the Windows' git.exe or
+# the linux git command depending on whether this is running from
+# a Windows or Linux directory. Running Windows git in Linux or
+# vice versa is incredibly slow due to WSL's file system performance
+# issues across the two OS's
+
+function isWinDir {
+    case $PWD/ in
+        /mnt/*) return $(true);;
+        *) return $(false);;
+    esac
+}
+
+# Git is incredibly slow in WSL. So instead, use the Windows git.exe in
+# WSL if it's installed and we're in a Windows directory
+if isWinDir; then
+    git.exe "$@"
+else
+    /usr/bin/realgit "$@"
+fi

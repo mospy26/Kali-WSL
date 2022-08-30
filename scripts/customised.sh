@@ -9,23 +9,3 @@ alias grep="grep --color='auto'"
 
 # grep files from list of tracked files on git
 alias gitgrep="git ls-files | grep $@"
-
-################################# any useful methods #######################################
-
-function isWinDir {
-    case $PWD/ in
-        /mnt/*) return $(true);;
-        *) return $(false);;
-    esac
-}
-
-# Git is incredibly slow in WSL. So instead, use the Windows git.exe in
-# WSL if it's installed and we're in a Windows directory
-function git {
-  if isWinDir
-  then
-     git.exe "$@"
-  else
-     /usr/bin/git "$@"
-  fi
-}

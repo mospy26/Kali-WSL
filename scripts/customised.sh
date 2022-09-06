@@ -1,9 +1,12 @@
 # Customised bash code to be sourced in any .bashrc file
 
 # Install all required packages (debian)
-packages=( neovim tmux )
+packages=( neovim tmux python3 )
 for package in $packages; do
-	dpkg-query -W -f='${Status}' $package >/dev/null | sudo apt-get install $package &>/dev/null
+	dpkg-query -l $package >/dev/null 
+	if [ $? -ne 0 ]; then
+		sudo apt-get install $package
+	fi
 done
 
 ################################# all aliases #######################################

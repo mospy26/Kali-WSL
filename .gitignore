@@ -1,1 +1,22 @@
 assets/
+
+# Home folder files 
+.bash_history
+.tmux_history
+.bashrc.original
+.cache/
+.hushlogin
+.java/
+.lesshst
+.local/
+.profile
+.ssh/
+.sudo_as_admin_successful
+.vim/
+.viminfo
+.vscode-server/
+.wget-hsts
+.zshrc
+Documents/
+.bash_logout
+

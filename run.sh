@@ -1,5 +1,9 @@
 # Run this script to setup your WSL environment
 
+# Ask whether in home directory 
+read -p "Are you in your home folder i.e. '~' (default: n, choose y/n)? " inHomeFolder
+inHomeFolder=${inHomeFolder:-y} # default value is n
+
 # Decorator
 decorate() {
 	eval "
@@ -17,6 +21,7 @@ decorate() {
 		}'
 	}
 
+
 obtain_assets() {
 	bash obtain_assets.sh
 	return $?
@@ -28,7 +33,9 @@ copyAssets() {
 	mkdir -p ~/assets && cp ./assets/git-prompt.sh ~/assets
 }
 decorate copyAssets
-copyAssets "Copying assets into relevant locations..."
+if [ "$inHomeFolder" = "n" ]; then
+	copyAssets "Copying assets into relevant locations..."
+fi
 
 # Copies bashrc and tmux.conf files into home dir
 copyCoreConfigFiles() {
@@ -36,24 +43,11 @@ copyCoreConfigFiles() {
 	cp .tmux.conf ~/.tmux.conf
 }
 decorate copyCoreConfigFiles
-copyCoreConfigFiles "Copying bashrc and tmux config files..." 
-
-read -p "Is this your work environment (default: no, choose yes/no)? " isWorkEnv
-isWorkEnv=${isWorkEnv:-no} # default value is no
+if [ "$inHomeFolder" = "n" ]; then
+	copyCoreConfigFiles "Copying bashrc and tmux config files..." 
+fi
 
 copyScripts() {
-	printf "\n" >> ~/.bashrc
-	echo "#########################################################################" >> ~/.bashrc
-	echo "######################### Source custom scripts #########################" >> ~/.bashrc
-	echo "#########################################################################" >> ~/.bashrc
-	printf "\n" >> ~/.bashrc
-	mkdir -p ~/scripts && cp ./scripts/customised.sh ~/scripts/customised.sh
-	echo "source ~/scripts/customised.sh" >> ~/.bashrc	
-	if [ "$isWorkEnv" == "yes" ]; then
-		mkdir -p ~/scripts && cp ./scripts/work.sh ~/scripts
-		echo "source ~/scripts/work.sh" >> ~/.bashrc
-	fi
-
 	copyGit() {
 		if [ ! -f /usr/bin/realgit ]; then
 			sudo mv /usr/bin/git /usr/bin/realgit

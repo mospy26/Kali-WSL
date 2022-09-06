@@ -165,3 +165,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+#########################################################################
+######################### Source custom scripts #########################
+#########################################################################
+
+source scripts/customised.sh
+source scripts/work.sh

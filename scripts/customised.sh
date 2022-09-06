@@ -11,6 +11,9 @@ done
 
 ################################# all aliases #######################################
 
+# Use nvim
+alias vim="nvim"
+
 # Shortcuts to windows C and D drive from linux
 alias cdc="cd /mnt/c"
 alias cdd="cd /mnt/d"

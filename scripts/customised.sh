@@ -9,10 +9,6 @@ for package in $packages; do
 	fi
 done
 
-########################## set console to work as vim ###############################
-set -o vi
-
-
 ################################# all aliases #######################################
 
 # Use nvim
@@ -25,5 +21,3 @@ alias grep="grep --color='auto'"
 
 # grep files from list of tracked files on git
 alias gitgrep="git ls-files | grep $@"
-
-

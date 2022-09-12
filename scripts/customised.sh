@@ -1,9 +1,9 @@
 # Customised bash code to be sourced in any .bashrc file
 
 # Install all required packages (debian)
-packages=( vim neovim tmux python3 )
-for package in $packages; do
-	dpkg-query -l $package >/dev/null 
+packages=("vim" "neovim" "tmux" "python3" "ranger" "ripgrep") 
+for package in "${packages[@]}"; do
+	dpkg-query -l $package &>/dev/null 
 	if [ $? -ne 0 ]; then
 		sudo apt-get install $package
 	fi

@@ -1,3 +1,4 @@
+.git/
 assets/
 
 # Home folder files 
@@ -21,3 +22,5 @@ Documents/
 .bash_logout
 .config/powershell
 .config/user-dirs.dirs
+.config/nvim/autoload/
+.config/nvim/plugged

@@ -12,10 +12,6 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },

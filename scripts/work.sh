@@ -26,3 +26,13 @@ alias sudo="sudo -E"
 
 # export PATH for code.exe
 export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Micsoroft\ VS\ Code/bin
+
+# alias to clean
+#alias clean="find ./wesp -wholename \"**/*Debug$1*\" -exec rm -rf {} +"
+
+# Usage: clean "DebugXXX"
+# 	 clean "ReleaseXXX"
+#	 Where XXX is the product code which can be ES, WH, WDC etc
+function clean () {
+    find ./wesp -wholename "**/*$1*" -exec rm -r {} +
+}

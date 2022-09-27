@@ -1,5 +1,13 @@
 # Run this script to setup your WSL environment
 
+# Check current OS
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    *)          machine=Windows;;
+esac
+
 # Ask whether in home directory 
 read -p "Are you in your home folder i.e. '~' (default: n, choose y/n)? " inHomeFolder
 inHomeFolder=${inHomeFolder:-y} # default value is n
@@ -41,12 +49,16 @@ fi
 copyCoreConfigFiles() {
 	cp .bashrc ~/.bashrc
 	cp .tmux.conf ~/.tmux.conf
+	cp .inputrc ~/.inputrc
+	mkdir -p ~/.config && cp -r .config/nvim ~/.config
+	cp -r .config/ranger ~/.config
 }
 decorate copyCoreConfigFiles
 if [ "$inHomeFolder" = "n" ]; then
 	copyCoreConfigFiles "Copying bashrc and tmux config files..." 
 fi
 
+# Move git for WSL - only needed in Windows WSL
 copyScripts() {
 	copyGit() {
 		if [ ! -f /usr/bin/realgit ]; then
@@ -55,11 +67,19 @@ copyScripts() {
 		sudo cp ./scripts/git /usr/bin/git
 		sudo chmod +x /usr/bin/git
 	}
-	decorate copyGit
-	copyGit "Moving git to realgit... This will require sudo access"
+	if [[ $machine = Windows ]]; then
+		decorate copyGit
+		copyGit "Moving git to realgit... This will require sudo access"
+	fi
+
+	mkdir -p ~/scripts/ && cp -r scripts/ ~/scripts
 }
 
 decorate copyScripts
-copyScripts "Copying necesary scripts and modifying bashrc..."
+copyScripts "Copying necesary scripts..."
+
+if [[ $machine = Mac ]]; then
+    echo "source ~/scripts/macos.sh" >> ~/.bashrc
+fi
 
 echo "Setup complete. Enjoy!"

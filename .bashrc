@@ -172,4 +172,3 @@ fi
 #########################################################################
 
 source ~/scripts/customised.sh
-source ~/scripts/work.sh

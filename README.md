@@ -1,1 +1,1 @@
-# Kali-WSL
+# Dot files for WSL environment / Linux environments

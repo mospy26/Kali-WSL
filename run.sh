@@ -5,7 +5,7 @@ source scripts/os.sh
 
 # Ask whether in home directory 
 read -p "Are you in your home folder i.e. '~' (default: n, choose y/n)? " inHomeFolder
-inHomeFolder=${inHomeFolder:-y} # default value is n
+inHomeFolder=${inHomeFolder:-n} # default value is n
 
 # Decorator
 decorate() {

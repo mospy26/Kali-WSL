@@ -1,12 +1,7 @@
 # Run this script to setup your WSL environment
 
-# Check current OS
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    *)          machine=Windows;;
-esac
+# obtain OS details
+source scripts/os.sh
 
 # Ask whether in home directory 
 read -p "Are you in your home folder i.e. '~' (default: n, choose y/n)? " inHomeFolder
@@ -77,9 +72,5 @@ copyScripts() {
 
 decorate copyScripts
 copyScripts "Copying necesary scripts..."
-
-if [[ $machine = Mac ]]; then
-    echo "source ~/scripts/macos.sh" >> ~/.bashrc
-fi
 
 echo "Setup complete. Enjoy!"

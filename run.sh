@@ -42,6 +42,7 @@ fi
 
 # Copies bashrc and tmux.conf files into home dir
 copyCoreConfigFiles() {
+	cp .profile ~/.profile
 	cp .bashrc ~/.bashrc
 	cp .tmux.conf ~/.tmux.conf
 	cp .inputrc ~/.inputrc

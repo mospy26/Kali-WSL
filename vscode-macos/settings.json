@@ -133,7 +133,7 @@
     "dart.debugExternalLibraries": false,
     "dart.debugSdkLibraries": false,
     "dart.openDevTools": "flutter",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
     "terminal.integrated.profiles.osx": {
 	"new bash": { // profile name
 	    "path": "/usr/local/bin/bash"

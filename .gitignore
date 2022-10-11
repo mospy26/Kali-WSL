@@ -1,6 +1,9 @@
 .git/
 assets/
 
+# Mac OSX specific files
+**/.DS_Store
+
 # Home folder files 
 .bash_history
 .tmux_history

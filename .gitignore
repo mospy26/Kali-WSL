@@ -9,7 +9,6 @@ assets/
 .tmux_history
 .bashrc.original
 .cache/
-.hushlogin
 .java/
 .lesshst
 .local/

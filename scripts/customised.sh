@@ -17,13 +17,20 @@ elif [[ $machine = Mac ]]; then
 	# export PATH to contain all executable binaries in macos
 	export PATH=$PATH:/usr/local/bin
 
-	brew_packages=$(brew list | xargs)
+	# Run brew in the background since it takes a while
+	{ brew_packages=$(brew list | xargs)
 	for package in "${packages[@]}"; do
 		echo $brew_packages | grep $package &>/dev/null 
 		if [ $? -ne 0 ]; then
-			brew install $package
+			brew install $package &>/dev/null
 		fi
-	done
+	done } &
+fi
+
+# install nvim plug
+if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
+    sh -c 'curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
 #####################################################################################

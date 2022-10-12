@@ -1,10 +1,4 @@
-
-if [ ! -d assets ]; then
-    echo "Creating assets folder..."
-    mkdir assets
-else
-    echo "assets/ folder already exists, skipping creation..."
-fi
+mkdir -p assets/
 
 if [ ! -f assets/git-prompt.sh ]; then
     echo "Obtaining git-prompt.sh script..."

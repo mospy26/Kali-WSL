@@ -3,9 +3,12 @@
 # obtain OS details
 source scripts/os.sh
 
-# Ask whether in home directory 
-read -p "Are you in your home folder i.e. '~' (default: n, choose y/n)? " inHomeFolder
-inHomeFolder=${inHomeFolder:-n} # default value is n
+# Check if current director is home directory 
+if [ $(pwd) = $HOME ]; then
+    inHomeFolder=y;
+else
+    inHomeFolder=n;
+fi
 
 # Decorator
 decorate() {

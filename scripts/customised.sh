@@ -24,7 +24,7 @@ elif [[ $machine = Mac ]]; then
 		if [ $? -ne 0 ]; then
 			brew install $package &>/dev/null
 		fi
-	done } &
+	done } & disown
 fi
 
 # install nvim plug

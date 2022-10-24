@@ -4,7 +4,7 @@
 
 source ~/scripts/os.sh
 # Install all required packages (debian)
-packages=("vim" "neovim" "tmux" "python3" "ranger" "ripgrep")
+packages=("vim" "neovim" "tmux" "python3" "ranger" "ripgrep" "bat")
 if [[ $machine = Windows ]] || [[ $machine = Linux ]]; then
 	for package in "${packages[@]}"; do
 		dpkg-query -l $package &>/dev/null 
@@ -44,6 +44,9 @@ set -o vi
 
 # Use nvim
 alias vim="nvim"
+
+# Use batcat as cat (batcat is enhanced cat with syntax highlighting)
+alias cat="batcat"
 
 # grep color
 alias grep="grep --color='auto'"

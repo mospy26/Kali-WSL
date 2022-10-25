@@ -1,2 +1,2 @@
 #env
-LESS = -r -S
+LESS = -rS

@@ -5,6 +5,7 @@
 	required = true
 [core]
 	editor = nvim
+	pager = less -rS
 [diff]
 	tool = vimdiff
 [alias]

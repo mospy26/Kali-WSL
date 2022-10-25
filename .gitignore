@@ -1,27 +1,23 @@
-.git/
-assets/
+# blacklist all files
+/*
 
-# Mac OSX specific files
-**/.DS_Store
-
-# Home folder files 
-.bash_history
-.tmux_history
-.bashrc.original
-.cache/
-.java/
-.lesshst
-.local/
-.ssh/
-.sudo_as_admin_successful
-.vim/
-.viminfo
-.vscode-server/
-.wget-hsts
-.zshrc
-Documents/
-.bash_logout
-.config/powershell
-.config/user-dirs.dirs
-.config/nvim/autoload/
-.config/nvim/plugged
+# whitelist repo files
+!.bashrc
+.config/nvim/
+!.config/nvim/init.vim
+!.gitconfig
+!.gitignore
+!.hushlogin
+!.inputrc
+!.lesskey
+!.profile
+!.tmux.conf
+!README.md
+!copy.sh
+!iterm2-profiles-macos/profile.json
+!microsoft_windows_terminal_settings/settings.json
+!obtain_assets.sh
+!run.sh
+!scripts/
+!vscode-macos/
+!vscode/

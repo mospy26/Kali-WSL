@@ -30,7 +30,13 @@ set -o vi
 alias vim="nvim"
 
 # Use batcat as cat (batcat is enhanced cat with syntax highlighting)
-alias cat="batcat"
+# For debian/ubuntu, the command is "batcat" and for all others its just "bat"`
+# we assume that I will always use Debian/Ubuntu machines so Linux means Debian/Ubuntu 
+if [[ $machine = Windows ]] || [[ $machine = Linux ]]; then
+    alias cat="batcat"
+elif [[ $machine = Mac ]]; then
+    alias cat="bat" 
+fi
 
 # grep color
 alias grep="grep --color='auto'"

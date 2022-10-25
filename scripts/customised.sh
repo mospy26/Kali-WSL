@@ -3,28 +3,12 @@
 # For mac users, add "export BASH_SILENCE_DEPRECATION_WARNING=1" in /etc/profile to silence the zsh warning
 
 source ~/scripts/os.sh
-# Install all required packages (debian)
-packages=("vim" "neovim" "tmux" "python3" "ranger" "ripgrep" "bat")
+
+# Install all required packages
 if [[ $machine = Windows ]] || [[ $machine = Linux ]]; then
-	for package in "${packages[@]}"; do
-		dpkg-query -l $package &>/dev/null 
-		if [ $? -ne 0 ]; then
-			sudo apt-get install $package
-		fi
-	done
+    source ~/scripts/install-packages-debian.sh
 elif [[ $machine = Mac ]]; then
-
-	# export PATH to contain all executable binaries in macos
-	export PATH=$PATH:/usr/local/bin
-
-	# Run brew in the background since it takes a while
-	{ brew_packages=$(brew list | xargs)
-	for package in "${packages[@]}"; do
-		echo $brew_packages | grep $package &>/dev/null 
-		if [ $? -ne 0 ]; then
-			brew install $package &>/dev/null
-		fi
-	done } & disown
+    source ~/scripts/install-packages-macos.sh
 fi
 
 # install nvim plug

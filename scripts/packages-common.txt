@@ -1,0 +1,7 @@
+vim
+neovim
+tmux
+python3
+ranger
+ripgrep
+bat

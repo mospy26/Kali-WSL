@@ -54,6 +54,9 @@ alias grep="grep --color='auto'"
 # grep files from list of tracked files on git
 alias gitgrep="git ls-files | grep $@"
 
+# "close" terminal while leaving process intact
+alias close="disown -a && exit"
+
 ################################# Windows WSL aliases #######################################
 
 if [[ $machine = Windows ]]; then
@@ -61,3 +64,7 @@ if [[ $machine = Windows ]]; then
 	alias cdc="cd /mnt/c"
 	alias cdd="cd /mnt/d"
 fi
+
+####################################### Scripts #############################################
+# mkd = make dir and cd into it
+mkd() { mkdir -p "$@" && cd "$@"; }

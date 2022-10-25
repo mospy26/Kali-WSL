@@ -1,21 +1,20 @@
 #!/bin/bash
 # This script is to install required packages upon setup for Mac OSX
 
+# obtain list of packages and store them since `brew list` takes a while to run
+brew_packages=$(brew list | xargs &)
+
+# export PATH to contain all executable binaries in macos
+export PATH=$PATH:/usr/local/bin
 
 # Install if does not exist
 checkAndInstall () {
 
-    # export PATH to contain all executable binaries in macos
-    export PATH=$PATH:/usr/local/bin
-
     # Run brew in the background since it takes a while
-    { brew_packages=$(brew list | xargs)
-    for package in "${packages[@]}"; do
-	    echo $brew_packages | grep $package &>/dev/null 
-	    if [ $? -ne 0 ]; then
-		    brew install $package &>/dev/null
-	    fi
-    done } & disown
+    { echo $brew_packages | grep $1 &>/dev/null 
+    if [ $? -ne 0 ]; then
+	    brew install $1 &>/dev/null
+    fi } & disown
 }
 
 # Install packages with package names common with Debian/Ubuntu (packages-common.txt)

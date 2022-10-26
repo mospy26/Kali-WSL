@@ -20,7 +20,7 @@ done
 # Install packages with different names as Mac OSX
 
 # git-delta v0.14.0 (see https://github.com/dandavison/delta/releases for latest versions)
-if [ ! -f assets/git-delta.deb ]; then
-    mkdir -p assets/ && wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb -O assets/git-delta.deb
+if [ ! -f ~/scripts/assets/git-delta.deb ]; then
+    mkdir -p ~/scripts/assets/ && wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb -O ~/scripts/assets/git-delta.deb
     checkAndInstall ~/scripts/assets/git-delta.deb
 fi

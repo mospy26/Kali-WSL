@@ -19,5 +19,6 @@
 !obtain_assets.sh
 !run.sh
 !scripts/
+scripts/assets/
 !vscode-macos/
 !vscode/

@@ -32,6 +32,9 @@ imap <RIGHT> <NOP>
 imap <UP> <NOP>
 imap <DOWN> <NOP>
 
+"Map Ctrl+L to clear highlighting
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+
 "Relative line numbers
 set number relativenumber
 

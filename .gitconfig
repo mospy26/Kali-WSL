@@ -11,6 +11,7 @@
 	colorMoved = default
 [alias]
 	lg = log --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset %Cgreen(%cr) -%C(yellow)%d%Creset %s' --abbrev-commit
+	rank = shortlog -sn --no-merges
 [interactive]
     diffFilter = delta --color-only
 [add.interactive]

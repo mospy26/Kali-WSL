@@ -22,3 +22,6 @@
 scripts/assets/
 !vscode-macos/
 !vscode/
+
+# Allow .vsvimrc
+!.vsvimrc

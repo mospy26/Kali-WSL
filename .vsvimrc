@@ -1,0 +1,5 @@
+" Enable text highlighting on search
+:set hlsearch
+
+" Map Y to yank into clipboard in visual mode
+xnoremap Y "+y

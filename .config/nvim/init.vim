@@ -47,6 +47,10 @@ nnoremap <LEADER>rc :so $MYVIMRC<CR>
 "Treat .props file as xml files for syntax
 au BufRead,BufNewFile *.props set filetype=xml
 
+"Remap :W to :w and :Q to :q
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
+
 "==============================================================="
 "======================Telescope Config========================="
 "==============================================================="

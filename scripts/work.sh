@@ -13,13 +13,13 @@ C_HOME="/mnt/c/Users/mmustafa"
 
 ################################# all aliases #######################################
 
+# Home directory
+alias cdhome="cd $C_HOME/"
+
 # Project local directories
 alias cdec="cd $D_PROJECTS/e4.6"
 alias cdhatch3="cd $C_REPOS/Hatch3"
 alias cdbernina="cd $C_REPOS/Bernina9"
-
-# Shortcut to scripts directory in local PC
-alias cdscripts="cd $C_HOME/My\ Documents/Scripts"
 
 # Alias sudo to sudo -E for proxy since env variables need to be preserved (which have the http/s proxy settings)
 alias sudo="sudo -E"

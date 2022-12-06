@@ -1,21 +1,45 @@
-"Set relative numbering
-:set number 
-:set relativenumber
-
 "Remap leader key to space
 let mapleader = " "
 
-" Enable text highlighting on search
-:set hlsearch
+"Set shift width as 4
+set shiftwidth=4
+
+"Disable arrowkeys
+nmap <LEFT> <NOP>
+nmap <RIGHT> <NOP>
+nmap <UP> <NOP>
+nmap <DOWN> <NOP>
+imap <LEFT> <NOP>
+imap <RIGHT> <NOP>
+imap <UP> <NOP>
+imap <DOWN> <NOP>
 
 " Map Y to yank into clipboard in visual mode
 xnoremap Y "+y
 
-"Ignore case when searching
-:set ignorecase
+"Map Ctrl+L to clear highlighting
+"VSVIM DOES NOT SUPPORT SILENT
+"nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+nnoremap <C-L> :nohlsearch<CR><C-L>
 
-"Map L to clear highlighting
-nnoremap <C-L> :noh<CR>
+"Relative line numbers
+set number relativenumber
 
-"Map Leader+s to surround highlighted text with () paranthesis
-xnoremap <leader>s xi()<Esc>P
+"Enable mouse support in all modes ("a")
+"NOT AVAILABLE IN VSVIM
+"set mouse=a
+
+"Load vim rc using \rc shortcut
+nnoremap <LEADER>rc :so $MYVIMRC<CR>
+
+"Treat .props file as xml files for syntax
+au BufRead,BufNewFile *.props set filetype=xml
+
+" Jump to matching pairs easily, with Tab
+nnoremap <Tab> %
+vnoremap <Tab> %
+
+"Remap :W to :w and :Q to :q
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
+

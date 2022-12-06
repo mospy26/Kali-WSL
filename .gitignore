@@ -25,3 +25,6 @@ scripts/assets/
 
 # Allow .vsvimrc
 !.vsvimrc
+
+# Allow settings.vssettings
+!settings.vssettings

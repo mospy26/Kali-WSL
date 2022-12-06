@@ -1,5 +1,21 @@
+"Set relative numbering
+:set number 
+:set relativenumber
+
+"Remap leader key to space
+let mapleader = " "
+
 " Enable text highlighting on search
 :set hlsearch
 
 " Map Y to yank into clipboard in visual mode
 xnoremap Y "+y
+
+"Ignore case when searching
+:set ignorecase
+
+"Map L to clear highlighting
+nnoremap <C-L> :noh<CR>
+
+"Map Leader+s to surround highlighted text with () paranthesis
+xnoremap <leader>s xi()<Esc>P

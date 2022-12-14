@@ -22,14 +22,14 @@ let mapleader = " "
 set shiftwidth=4
 
 "Disable arrowkeys
-nmap <LEFT> <NOP>
-nmap <RIGHT> <NOP>
-nmap <UP> <NOP>
-nmap <DOWN> <NOP>
-imap <LEFT> <NOP>
-imap <RIGHT> <NOP>
-imap <UP> <NOP>
-imap <DOWN> <NOP>
+"nmap <LEFT> <NOP>
+"nmap <RIGHT> <NOP>
+"nmap <UP> <NOP>
+"nmap <DOWN> <NOP>
+"imap <LEFT> <NOP>
+"imap <RIGHT> <NOP>
+"imap <UP> <NOP>
+"imap <DOWN> <NOP>
 
 " Map Y to yank into clipboard in visual mode
 xnoremap Y "+y

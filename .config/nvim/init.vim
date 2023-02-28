@@ -57,6 +57,9 @@ vnoremap <Tab> %
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
 
+"Remap d to "_d
+nnoremap d "_d
+
 "==============================================================="
 "======================Telescope Config========================="
 "==============================================================="

@@ -33,7 +33,7 @@ alias vim="nvim"
 # For debian/ubuntu, the command is "batcat" and for all others its just "bat"`
 # we assume that I will always use Debian/Ubuntu machines so Linux means Debian/Ubuntu 
 if [[ $machine = Windows ]] || [[ $machine = Linux ]]; then
-    alias cat="batcat"
+    alias bcat="batcat"
 elif [[ $machine = Mac ]]; then
     alias cat="bat" 
 fi

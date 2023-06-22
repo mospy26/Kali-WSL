@@ -171,4 +171,5 @@ fi
 ######################### Source custom scripts #########################
 #########################################################################
 
+source ~/scripts/work.sh
 source ~/scripts/customised.sh

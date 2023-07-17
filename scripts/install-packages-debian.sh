@@ -21,6 +21,6 @@ done
 
 # git-delta v0.14.0 (see https://github.com/dandavison/delta/releases for latest versions)
 if [ ! -f ~/scripts/assets/git-delta.deb ]; then
-    mkdir -p ~/scripts/assets/ && wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb -O ~/scripts/assets/git-delta.deb
-    checkAndInstall ~/scripts/assets/git-delta.deb
+    mkdir -p ~/scripts/assets/ && wget https://github.com/dandavison/delta/releases/download/0.16.5/git-delta_0.16.5_amd64.deb -O ~/scripts/assets/git-delta.deb
+    sudo dpkg -i ~/scripts/assets/git-delta.deb
 fi

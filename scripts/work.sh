@@ -10,6 +10,7 @@ export https_proxy=http://wcmproxy.pgo.local:80/
 D_PROJECTS="/mnt/d/Projects"
 C_REPOS="/mnt/c/repos"
 C_HOME="/mnt/c/Users/mmustafa"
+WINHOME="/mnt/c/Users/mmustafa"
 
 ################################# all aliases #######################################
 

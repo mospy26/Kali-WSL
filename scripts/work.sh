@@ -36,3 +36,7 @@ export PATH=$PATH:/mnt/c/Users/mmustafa/AppData/Local/Programs/Micsoroft\ VS\ Co
 function clean () {
     find ./wesp -wholename "**/*$1*" -exec rm -r {} +
 }
+
+# inevitably install windows packages as we know this is a windows system
+# We have this installed so comment out for now
+# source ~/scripts/install-packages-windows.sh

@@ -12,6 +12,9 @@ C_REPOS="/mnt/c/repos"
 C_HOME="/mnt/c/Users/mmustafa"
 WINHOME="/mnt/c/Users/mmustafa"
 
+# shortcut to open todo
+vimtodo="vim ~/.todo"
+
 ################################# all aliases #######################################
 
 # Home directory

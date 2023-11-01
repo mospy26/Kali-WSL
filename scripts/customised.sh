@@ -47,6 +47,12 @@ alias gitgrep="git ls-files | grep $@"
 # "close" terminal while leaving process intact
 alias close="disown -a && exit"
 
+# ripgrep file names that match pattern
+# Usage: rgf <pattern> <dir>
+function rgf {
+    rg --files $2 | rg $1
+}
+
 ################################# Windows WSL aliases #######################################
 
 if [[ $machine = Windows ]]; then

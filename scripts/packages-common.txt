@@ -6,3 +6,4 @@ ranger
 ripgrep
 bat
 traceroute
+rsync

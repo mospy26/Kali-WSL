@@ -72,10 +72,26 @@ copyScripts() {
 		copyGit "Moving git to realgit... This will require sudo access"
 	fi
 
-	mkdir -p ~/scripts/ && cp -r scripts/ ~/scripts
-}
+	copyRepoBuildScripts()
+	{
+	    # Check if repoBuild scripts exist
+	    if [ ! -d "$(pwd)/scriptsGist" ]; then
+		echo "repoBuild scripts do not exist locally. Please download them and place in scriptsGist directory. Skipping..."
+		return
+	    fi
+	    sudo cp scriptsGist/repoBuild /usr/bin/repoBuild
+	    sudo cp scriptsGist/repoBuild.bat /mnt/d/Projects/repoBuild.bat
+	    sudo cp scriptsGist/repoBuild.bat /mnt/c/Users/MMustafa/Projects/repoBuild.bat
+	}
+	decorate copyRepoBuildScripts
+	copyRepoBuildScripts "Copying repoBuild scripts from gist..."
 
+	if [ "$inHomeFolder" = "n" ]; then
+		mkdir -p ~/scripts/ && cp -r scripts/ ~/scripts
+	fi
+}
 decorate copyScripts
+
 copyScripts "Copying necesary scripts..."
 
 echo "Setup complete. Enjoy!"

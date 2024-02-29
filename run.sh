@@ -80,8 +80,6 @@ copyScripts() {
 		return
 	    fi
 	    sudo cp scriptsGist/repoBuild /usr/bin/repoBuild
-	    sudo cp scriptsGist/repoBuild.bat /mnt/d/Projects/repoBuild.bat
-	    sudo cp scriptsGist/repoBuild.bat /mnt/c/Users/MMustafa/Projects/repoBuild.bat
 	}
 	decorate copyRepoBuildScripts
 	copyRepoBuildScripts "Copying repoBuild scripts from gist..."

@@ -9,8 +9,7 @@ export https_proxy=http://wcmproxy.pgo.local:80/
  
 D_PROJECTS="/mnt/d/Projects"
 C_REPOS="/mnt/c/repos"
-C_HOME="/mnt/c/Users/mmustafa"
-WINHOME="/mnt/c/Users/mmustafa"
+export C_HOME="/mnt/c/Users/MMustafa"
 
 # shortcut to open todo
 vimtodo="vim ~/.todo"
@@ -25,6 +24,7 @@ alias cdre="cd $D_PROJECTS/Review"
 alias cdec="cd $D_PROJECTS/e4.6"
 alias cdhatch3="cd $D_PROJECTS/Hatch3"
 alias cde5="cd /mnt/c/Users/MMustafa/Projects/e5.0"
+alias cdbernina="cd /mnt/c/Users/MMustafa/Projects/BERNINA"
 
 # Alias sudo to sudo -E for proxy since env variables need to be preserved (which have the http/s proxy settings)
 alias sudo="sudo -E"

@@ -1,0 +1,2 @@
+# Ensure that .bashrc is sourced for both login and non-login interactive shells.
+source ~/.bashrc

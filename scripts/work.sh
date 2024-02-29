@@ -45,3 +45,12 @@ function clean () {
 # inevitably install windows packages as we know this is a windows system
 # We have this installed so comment out for now
 # source ~/scripts/install-packages-windows.sh
+
+sln ()
+{
+    filename=`rgf $1`
+    filename=$(wslpath -w $filename)
+    echo Opening solution file $fileName
+
+    explorer.exe $filename
+}

@@ -53,6 +53,13 @@ function rgf {
     rg --files $2 | rg $1
 }
 
+
+# ripgrep list file names that contain pattern
+# Usage: rgif <pattern>
+function rgif {
+    rg -l $1
+}
+
 ################################# Windows WSL aliases #######################################
 
 if [[ $machine = Windows ]]; then

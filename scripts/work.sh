@@ -8,8 +8,8 @@ export https_proxy=http://wcmproxy.pgo.local:80/
 ################################# variables ########################################
  
 D_PROJECTS="/mnt/d/Projects"
-C_PROJECTS="/mnt/c/Projects"
-export C_HOME="/mnt/c/Users/MMustafa"
+C_HOME="/mnt/c/Users/MMustafa"
+export C_PROJECTS="/mnt/c/Projects" # export variable to make available to all child processes of shell
 
 # shortcut to open todo
 vimtodo="vim ~/.todo"

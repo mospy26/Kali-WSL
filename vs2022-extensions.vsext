@@ -1,0 +1,56 @@
+{
+  "id": "f2250f2d-70fa-4b8e-a121-25500f412294",
+  "version": "1.0",
+  "name": "My Visual Studio extensions",
+  "description": "A collection of my Visual Studio extensions",
+  "extensions": [
+    {
+      "vsixId": "VsVim.Microsoft.e97cd707-324b-4e35-a669-eef8dae4b8cf",
+      "name": "VsVim 2022",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim2022Preview",
+      "downloadUrl": "https://jaredparmsft.gallery.vsassets.io:443/_apis/public/gallery/publisher/JaredParMSFT/extension/VsVim2022Preview/2.10.0.6/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    },
+    {
+      "vsixId": "44630d46-96b5-488c-8df926e21db8c1a3",
+      "name": "Visual Assist",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=WholeTomatoSoftware.VisualAssist",
+      "downloadUrl": null
+    },
+    {
+      "vsixId": "e99dde0e-e023-410d-bc5d-3f76db71e3f0",
+      "name": "Open in Visual Studio Code",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode",
+      "downloadUrl": "https://madskristensen.gallery.vsassets.io:443/_apis/public/gallery/publisher/MadsKristensen/extension/OpeninVisualStudioCode/1.4.58/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    },
+    {
+      "vsixId": "GitDiffMargin..5ef9f816-d9ce-45cd-a8fa-cd67a807df0e",
+      "name": "Git Diff Margin",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=LaurentKempe.GitDiffMargin",
+      "downloadUrl": "https://laurentkempe.gallery.vsassets.io:443/_apis/public/gallery/publisher/LaurentKempe/extension/GitDiffMargin/3.12.1/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    },
+    {
+      "vsixId": "VSOutputEnhancer.Nikolay Balakin.a06be4c3-f97e-425c-8a0d-bdef08ac2abb",
+      "name": "Output enhancer",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=NikolayBalakin.Outputenhancer",
+      "downloadUrl": "https://nikolaybalakin.gallery.vsassets.io:443/_apis/public/gallery/publisher/NikolayBalakin/extension/Outputenhancer/1.8/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    },
+    {
+      "vsixId": "65dd734b-180a-4c67-b245-56de889637e1",
+      "name": "VSColorOutput64",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64",
+      "downloadUrl": "https://mikeward-annarbor.gallery.vsassets.io:443/_apis/public/gallery/publisher/MikeWard-AnnArbor/extension/VSColorOutput64/2023.4/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    },
+    {
+      "vsixId": "FilePathOnFooter..c9550e78-0647-4b3f-b1d7-22a719752870",
+      "name": "File Path On Footer",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter",
+      "downloadUrl": "https://shemeerns.gallery.vsassets.io:443/_apis/public/gallery/publisher/ShemeerNS/extension/FilePathOnFooter/2.1.1.2/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    },
+    {
+      "vsixId": "TabsColor.36ac46d8-9efb-4b82-b944-1d098ac8ea11",
+      "name": "TabsColor",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=nolor.norloTabs",
+      "downloadUrl": "https://nolor.gallery.vsassets.io:443/_apis/public/gallery/publisher/nolor/extension/norloTabs/1.2/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true\u0026update=true"
+    }
+  ]
+}

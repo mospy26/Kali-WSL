@@ -1,3 +1,6 @@
+" VsVim config file
+" Copy into %USERPROFILE% for this to work in VS in Windows machines
+
 " Enable text highlighting on search
 :set hlsearch
 

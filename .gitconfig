@@ -6,6 +6,7 @@
 [core]
 	editor = vim
 	pager = delta
+	sshCommand = ssh -i /home/mmustafa/.ssh/id_rsa_github_com
 [diff]
 	tool = vimdiff
 [alias]
